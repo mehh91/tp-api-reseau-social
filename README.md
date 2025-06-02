@@ -43,7 +43,7 @@ Chaque service :
 
 ---
 
-## 📨 `posts-service` (port 3002)
+## `posts-service` (port 3002)
 
 ### Fonctions :
 - `POST /api/posts` → Créer un post
