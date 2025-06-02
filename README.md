@@ -4,13 +4,13 @@
 Ce projet est une API backend conçue pour un réseau social, réalisée en **Node.js**, structurée en **microservices**, avec stockage des données dans **MongoDB**.  
 Il répond aux exigences de **modularité**, **sécurité**, et **scalabilité**.
 
-## 📁 Architecture des microservices
+## Architecture des microservices
 
 Le projet se compose de **3 microservices indépendants** :
 
-- 🔐 `auth-service` : gestion des utilisateurs (inscription, connexion, mot de passe oublié)
-- 📨 `posts-service` : gestion des publications
-- ❤️ `likes-service` : gestion des likes liés aux posts
+- `auth-service` : gestion des utilisateurs (inscription, connexion, mot de passe oublié)
+- `posts-service` : gestion des publications
+- `likes-service` : gestion des likes liés aux posts
 
 Chaque service :
 - a sa propre base MongoDB
@@ -19,7 +19,7 @@ Chaque service :
 
 ---
 
-## ⚙️ Technologies utilisées
+## Technologies utilisées
 
 - Node.js
 - Express.js
@@ -31,7 +31,7 @@ Chaque service :
 
 ---
 
-## 🔐 `auth-service` (port 3001)
+## `auth-service` (port 3001)
 
 ### Fonctions :
 - `POST /api/auth/register` → Inscription
@@ -57,7 +57,7 @@ Chaque service :
 
 ---
 
-## ❤️ `likes-service` (port 3003)
+##  `likes-service` (port 3003)
 
 ### Fonctions :
 - `POST /api/likes` → Ajouter un like  
@@ -68,14 +68,14 @@ Chaque service :
 
 ---
 
-## 🔗 Communication entre services
+## Communication entre services
 
 - Le `likes-service` utilise **axios** pour appeler les routes `/like` et `/unlike` du `posts-service`.
 - Les identifiants des utilisateurs (`userName`) et des posts (`postId`) sont utilisés pour relier les entités.
 
 ---
 
-## 📄 Exemple de `.env` global (dans `social-network-api/.env`)
+## Exemple de `.env` global (dans `social-network-api/.env`)
 
 ```
 USERS=http://localhost:3001
@@ -85,7 +85,7 @@ LIKES=http://localhost:3003
 
 ---
 
-## ▶️ Lancer le projet (en local)
+##  Lancer le projet (en local)
 
 Lancer chaque service dans son terminal :
 
@@ -109,7 +109,7 @@ npm start
 
 ---
 
-## ✅ Objectifs pédagogiques atteints
+## Objectifs pédagogiques atteints
 
 - ✔️ Architecture microservices fonctionnelle
 - ✔️ Sécurisation des mots de passe
@@ -119,5 +119,5 @@ npm start
 
 ---
 
-## 📮 Auteur
+## Auteur
 Mehdi — TP API Microservices | 2025
